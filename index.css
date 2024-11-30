@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #0096c7;
+    
+}
+
+.TTT-Game ,.turn{
+    display: flex;
+    justify-content: center;
+    margin: 7px;
+}
+
+.turnT{
+    font-weight: 200;
+}
+
+
+/* Heading  */
+.title{
+    color: #edf6f9;
+    font-size: 4rem;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    
+}
+.hide{
+    display: none;
+}
+/* Game Layout */
+.board{
+    display: grid;
+    grid-template-rows: repeat(3,150px);
+    grid-template-columns: repeat(3,150px);
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.box{
+    width: 150px;
+    height: 150px;
+    background-color: #0077b6;
+    color: #def2f1;
+    font-size: 5.5rem;
+    border: none;
+    border-radius: 11px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    &:hover{
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+}
+
+/* Reset BUtton */
+.Rest-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+}
+
+.reset{
+    width: 125px;
+    height: 40px;
+    background-color: #ffb703;
+    font-size: 1.2rem;
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+   
+    &:hover{
+        background-color: #ffd60a;
+    }
+}
+
+/* Media Query  */
+@media (max-width: 650px){
+   
+    .board{
+        display: grid;
+        grid-template-rows: repeat(3,120px);
+        grid-template-columns: repeat(3,120px);
+    }
+    .box{
+        width: 120px;
+        height: 120px;
+        font-size: 3.5rem;
+    }
+    .title{
+        font-size: 3rem;
+    }
+    .reset{
+        width: 100px;
+        height: 30px;
+        font-size: 1rem;
+    }   
+}
+
+@media (max-width: 400px){
+   
+    .board{
+        display: grid;
+        grid-template-rows: repeat(3,90px);
+        grid-template-columns: repeat(3,90px);
+    }
+    .box{
+        width: 90px;
+        height: 90px;
+        font-size: 2.5rem;
+    }
+    .title{
+        font-size: 2.5rem;
+    }
+    .reset{
+        width: 100px;
+        height: 30px;
+        font-size: 1rem;
+    }   
+}
